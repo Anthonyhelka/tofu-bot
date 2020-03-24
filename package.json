@@ -1,7 +1,7 @@
 {
   "name": "tofu-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tofu-bot is a discord bot that allows users to get random pictures of the baby bunny, Tofu!",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
