@@ -8,7 +8,7 @@ To install Tofu-Bot onto your Discord server, visit the link below:
 ```
 https://discordapp.com/api/oauth2/authorize?client_id=692108483063054427&permissions=522304&scope=bot
 ```
-You will be prompted to select your desired server that you would like to add Tofu-Bot to as well as the permissions you will allow Tofu-Bot to have. We highly recommend leaving the permissions set to default.
+Select the server that you would like Tofu-Bot to join to as well as the permissions Tofu-Bot will have. We highly recommend leaving the permissions set to default.
 
 # Usage
 
