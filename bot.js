@@ -1,6 +1,6 @@
 const fs = require('fs-extra');
 const Discord = require('discord.js');
-const { prefix, token } = require('./config.json');
+require('dotenv').config();
 
 const client = new Discord.Client();
 
@@ -9,7 +9,7 @@ client.once('ready', () => {
 });
 
 client.on('message', (message) => {
-  if (message.content.toLowerCase().startsWith(`${prefix}tofu`)) {
+  if (message.content.toLowerCase().startsWith('!tofu')) {
     const imagesFolder = './images/';
     const images = fs.readdirSync(imagesFolder).map((image) => image);
     const randomImage = images[Math.floor(Math.random() * images.length)];
@@ -17,4 +17,4 @@ client.on('message', (message) => {
   }
 });
 
-client.login(token);
+client.login(process.env.BOT_TOKEN);
