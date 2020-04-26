@@ -70,6 +70,18 @@ client.on('message', (message) => {
   if (content.toLowerCase().startsWith('!helka')) {
     channel.send(randomQuote('helka'));
   }
+
+  if (content.toLowerCase().startsWith('!chris -fish')) {
+    channel.send(fs.readFileSync('./images/fish/chris.png'));
+  }
+
+  if (content.toLowerCase().startsWith('!pirolli -fish')) {
+    channel.send('Unfortunately, Pirolli has yet to catch a SINGLE fish. Shameful.');
+  }
+
+  if (content.toLowerCase().startsWith('!helka -fish')) {
+    channel.send(fs.readFileSync('./images/fish/helka.png'));
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
