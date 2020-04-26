@@ -71,15 +71,15 @@ client.on('message', (message) => {
     channel.send(randomQuote('helka'));
   }
 
-  if (content.toLowerCase().startsWith('!chris -fish')) {
+  if (content.toLowerCase().startsWith('!fishChris')) {
     channel.send(fs.readFileSync('./images/fish/chris.png'));
   }
 
-  if (content.toLowerCase().startsWith('!pirolli -fish')) {
+  if (content.toLowerCase().startsWith('!fishPirolli')) {
     channel.send('Unfortunately, Pirolli has yet to catch a SINGLE fish. Shameful.');
   }
 
-  if (content.toLowerCase().startsWith('!helka -fish')) {
+  if (content.toLowerCase().startsWith('!fishHelka')) {
     channel.send(fs.readFileSync('./images/fish/helka.png'));
   }
 });
