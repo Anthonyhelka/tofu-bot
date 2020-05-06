@@ -1,11 +1,11 @@
 const fs = require('fs-extra');
-const Discord = require('discord.js');
+const { Client, MessageAttachment } = require('discord.js');
 require('dotenv').config();
 
 const randomImage = require('./utils/randomImage.js');
 const randomQuote = require('./utils/randomQuote.js');
 
-const client = new Discord.Client();
+const client = new Client();
 
 client.once('ready', () => {
   console.log('Ready');
@@ -71,16 +71,22 @@ client.on('message', (message) => {
     channel.send(randomQuote('helka'));
   }
 
-  if (content.toLowerCase().startsWith('!fishChris')) {
-    channel.send(fs.readFileSync('./images/fish/chris.png'));
+  if (content.toLowerCase().startsWith('!fish chris')) {
+    const image = new MessageAttachment(fs.readFileSync('./images/fish/chris.png'));
+    channel.send(image);
   }
 
-  if (content.toLowerCase().startsWith('!fishPirolli')) {
+  if (content.toLowerCase().startsWith('!fish shawn')) {
+    channel.send('Shawn would do something to disturb the environment like catch a fish.');
+  }
+
+  if (content.toLowerCase().startsWith('!fish pirolli')) {
     channel.send('Unfortunately, Pirolli has yet to catch a SINGLE fish. Shameful.');
   }
 
-  if (content.toLowerCase().startsWith('!fishHelka')) {
-    channel.send(fs.readFileSync('./images/fish/helka.png'));
+  if (content.toLowerCase().startsWith('!fish helka')) {
+    const image = new MessageAttachment(fs.readFileSync('./images/fish/helka.png'));
+    channel.send(image);
   }
 });
 
