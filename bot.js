@@ -77,7 +77,7 @@ client.on('message', (message) => {
   }
 
   if (content.toLowerCase().startsWith('!fish shawn')) {
-    channel.send('Shawn would do something to disturb the environment like catch a fish.');
+    channel.send('Shawn wouldn\'t do something to disturb the environment like catch a fish.');
   }
 
   if (content.toLowerCase().startsWith('!fish pirolli')) {
