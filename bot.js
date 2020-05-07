@@ -88,6 +88,10 @@ client.on('message', (message) => {
     const image = new MessageAttachment(fs.readFileSync('./images/fish/helka.png'));
     channel.send(image);
   }
+
+  if (content.toLowerCase().startsWith('123')) {
+    channel.send('456');
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
