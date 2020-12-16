@@ -12,7 +12,9 @@ client.once('ready', () => {
 });
 
 client.on('message', (message) => {
-  const { content, channel } = message;
+  const { content, channel, author } = message;
+
+  if (author.bot) { return; }
 
   if (content.toLowerCase().startsWith('!commands')) {
     message.channel.send(`
@@ -91,6 +93,14 @@ client.on('message', (message) => {
 
   if (content.toLowerCase().startsWith('123')) {
     channel.send('456');
+  }
+
+  if (content.toLowerCase().startsWith('789')) {
+    channel.send('10 and... stop');
+  }
+
+  if (content.toLowerCase().includes('swag')) {
+    channel.send('Tofu says the word swag is so 2012... just stop.');
   }
 });
 
