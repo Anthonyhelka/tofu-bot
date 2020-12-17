@@ -73,6 +73,14 @@ client.on('message', (message) => {
     channel.send(randomQuote('helka'));
   }
 
+  if (content.toLowerCase().startsWith('!tyler')) {
+    channel.send(randomQuote('tyler'));
+  }
+
+  if (content.toLowerCase().startsWith('!dylan')) {
+    channel.send(randomQuote('dylan'));
+  }
+
   if (content.toLowerCase().startsWith('!fish chris')) {
     const image = new MessageAttachment(fs.readFileSync('./images/fish/chris.png'));
     channel.send(image);
