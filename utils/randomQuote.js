@@ -19,10 +19,7 @@ const randomQuote = (person) => {
         '*Sees friends goofing off*\n"WOAH JEEZ RELAX CALM DOWN GUYS JESUS"',
         '"I would come hangout, but I have to study guys. Who knows how tough my brother\'s test is going to be."',
         '*Someone tries to start a conversation with shawn*\nYeah, that\'s just how it is."\n*Immediately ends conversation*"',
-        '"I really don\'t think we should work on this generator together.."',
-        '"I really don\'t think we should heal eachother here..."',
-        '"I really don\'t think we should run away together..."',
-        '"I really don\'t think we should escape together..."',
+        '"I really don\'t think we should work on this generator together.."\n"I really don\'t think we should heal eachother here..."\n"I really don\'t think we should run away together..."\n"I really don\'t think we should escape together..."',
         '"Guys I\'ll be right back, there\'s a tree outside with a branch thats about to break and I think I can save it.'
       ];
       break;
