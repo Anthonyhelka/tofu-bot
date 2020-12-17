@@ -30,6 +30,8 @@ client.on('message', (message) => {
       **!shawn** - Get random Shawn quote
       **!pirolli** - Get random Pirolli quote
       **!helka** - Get random Helka quote
+      **!tyler** - Get random Tyler quote
+      **!dylan** - Get random Dylan quote
     `);
   }
 
