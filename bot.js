@@ -33,6 +33,7 @@ client.on('message', (message) => {
       **!helka** - Get random Helka quote
       **!tyler** - Get random Tyler quote
       **!dylan** - Get random Dylan quote
+      **!swag** - Find out your SWAG rating
     `);
   }
 
