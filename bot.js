@@ -13,6 +13,7 @@ client.once('ready', () => {
 
 client.on('message', (message) => {
   const { content, channel, author } = message;
+  let amount = 1;
 
   if (author.bot) { return; }
 
@@ -109,8 +110,29 @@ client.on('message', (message) => {
     channel.send('10 and... stop');
   }
 
-  if (content.toLowerCase().includes('swag')) {
-    channel.send('Tofu says the word swag is so 2012... just stop.');
+  if (content.toLowerCase().startsWith('!swag')) {
+    const swagRating = Math.floor(Math.random() * 101);
+    const swagSaying = `**You SWAG rating is:** ${swagRating}`;
+    if (swagRating >= 0 && swagRating <= 25) {
+      channel.send(`${swagSaying}\n You have legit like no swag... like basically 0.`);
+      return;
+    }
+    if (swagRating >= 26 && swagRating <= 50) {
+      channel.send(`${swagSaying}\n You have *some* swag, I guess.`);
+      return;
+    }
+    if (swagRating >= 51 && swagRating <= 75) {
+      channel.send(`${swagSaying}\n You\'re pretty swag-y.`);
+      return;
+    }
+    if (swagRating >= 76 && swagRating <= 99) {
+      channel.send(`${swagSaying}\n You\'re swagalicious.`);
+      return;
+    }
+    if (swagRating >= 100) {
+      channel.send(`${swagSaying}\n Literally *overflowing* with swag. Like dripping.`);
+      return;
+    }
   }
 });
 
